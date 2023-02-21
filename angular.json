@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "ng-template": {
+        "ng-css-workshop": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/ng-template",
+                        "outputPath": "dist/ng-css-workshop",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -74,18 +74,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "ng-template:build"
+                        "browserTarget": "ng-css-workshop:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "ng-template:build:production"
+                            "browserTarget": "ng-css-workshop:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "ng-template:build"
+                        "browserTarget": "ng-css-workshop:build"
                     }
                 },
                 "lint": {
@@ -107,7 +107,7 @@
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "ng-template:serve:production"
+                            "devServerTarget": "ng-css-workshop:serve:production"
                         }
                     }
                 }
