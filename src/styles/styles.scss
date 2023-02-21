@@ -1,0 +1,13 @@
+@import './reset-css';
+@import './typography';
+@import './buttons';
+@import './utils';
+
+body * {
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}

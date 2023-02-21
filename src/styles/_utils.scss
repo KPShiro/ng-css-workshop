@@ -1,0 +1,5 @@
+@use 'src/styles/theme-variables' as theme;
+
+.text-muted {
+    color: theme.$text-muted;
+}

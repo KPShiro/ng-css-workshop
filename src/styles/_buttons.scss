@@ -1,0 +1,64 @@
+@use 'src/styles/theme-variables' as theme;
+
+.btn {
+    width: max-content;
+    padding: theme.$spacer-sm theme.$spacer-md;
+    box-shadow: none;
+
+    border: theme.$border-width solid transparent;
+    border-radius: theme.$border-radius;
+
+    background-color: transparent;
+
+    font-family: theme.$font-family;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: theme.$line-height;
+    color: theme.$text-body;
+
+    cursor: pointer;
+
+    &:enabled:hover {
+        background-color: transparentize(theme.$border-color, 0.72);
+    }
+
+    &:enabled:active {
+        outline: 0.25rem solid transparentize(theme.$border-color, 0.64);
+    }
+
+    &:disabled {
+        opacity: theme.$disabled-opacity;
+        cursor: not-allowed;
+    }
+}
+
+.btn.btn-outlined {
+    border: theme.$border-width solid theme.$border-color;
+
+    &:enabled:hover {
+        background-color: transparentize(theme.$border-color, 0.72);
+    }
+
+    &:enabled:active {
+        border-color: darken(theme.$border-color, 24%);
+    }
+}
+
+.btn.btn-filled {
+    background-color: theme.$color-primary;
+    color: white;
+
+    &:enabled:hover {
+        background-color: lighten(theme.$color-primary, 12%);
+    }
+
+    &:enabled:active {
+        background-color: darken(theme.$color-primary, 24%);
+        outline-color: transparentize(theme.$color-primary, 0.88);
+    }
+
+    &:disabled {
+        background-color: theme.$border-color;
+        color: theme.$text-body;
+    }
+}

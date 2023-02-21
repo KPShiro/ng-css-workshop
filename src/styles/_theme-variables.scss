@@ -1,0 +1,21 @@
+$color-primary: #333;
+
+$text-body: #333;
+$text-muted: lighten($text-body, 24%);
+
+$font-family: 'Poppins', sans-serif;
+
+$line-height: 1.75;
+
+$spacer-base: 0.25rem;
+$spacer-xs: $spacer-base; // 4px
+$spacer-sm: $spacer-base * 2; // 8px
+$spacer-md: $spacer-base * 4; // 16px
+$spacer-lg: $spacer-base * 6; // 24px
+$spacer-xl: $spacer-base * 10; // 40px
+
+$disabled-opacity: 0.42;
+
+$border-radius: 0.25rem;
+$border-width: 1px;
+$border-color: #d0d0d0;
