@@ -4,6 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from '@app/core/core.module';
 import { AppInitializerProvider } from '@app/core/providers';
+import { FaConfig, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
     declarations: [
@@ -21,4 +25,13 @@ import { AppInitializerProvider } from '@app/core/providers';
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(
+        private readonly _faIconLibrary: FaIconLibrary,
+        private readonly _faConfig: FaConfig,
+    ) {
+        this._faIconLibrary.addIconPacks(fas, far, fab);
+        this._faConfig.defaultPrefix = 'fas';
+        this._faConfig.fixedWidth = true;
+    }
+}
