@@ -18,20 +18,16 @@ export class NavbarComponent implements OnInit {
     ngOnInit(): void {
         this._navLinks.next([
             {
-                path: '/css-units',
+                path: '/cases/css-units',
                 text: 'CSS Units',
             },
             {
-                path: '/layout-flexbox',
+                path: '/cases/layout-flexbox',
                 text: 'Layout: Flexbox',
             },
             {
-                path: '/layout-grid',
+                path: '/cases/layout-grid',
                 text: 'Layout: Grid',
-            },
-            {
-                path: '/dos-and-donts',
-                text: "Dos and don'ts",
             },
         ]);
     }

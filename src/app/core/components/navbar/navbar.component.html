@@ -6,15 +6,31 @@
             </a>
         </span>
         <ul class="flex items-center p-4 space-x-2 text-sm font-medium">
-            <li *ngFor="let navLink of (navLinks | async)">
-                <a [routerLink]="[ navLink.path ]"
+            <li class="relative group">
+                <a [routerLink]="[ '/cases' ]" class="block py-2.5 px-3 rounded-md group-hover:bg-white group-hover:bg-opacity-5 hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium"
+                    routerLinkActive="nav-link--active">
+                    Knowledge Base
+                </a>
+                <div class="absolute left-0 top-full z-10 hidden min-w-[192px] group-hover:block">
+                    <ul class="block mt-1 rounded-md shadow dark:bg-gray-800 py-2">
+                        <li *ngFor="let navLink of (navLinks | async)">
+                            <a [routerLink]="[ navLink.path ]" routerLinkActive="nav-link--active" 
+                                class="block py-2.5 px-3 hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium">
+                                {{ navLink.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a [routerLink]="[ '/dos-and-donts' ]"
                     class="block py-2.5 px-3 rounded-md hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium"
-                    routerLinkActive="nav-link--active">{{ navLink.text }}</a>
+                    routerLinkActive="nav-link--active">Dos and don'ts</a>
             </li>
             <li>
                 <a [routerLink]="[ '/workspace' ]"
                     class="block py-2.5 px-4 rounded-md bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium">
-                    My Workspace
+                    Workspace
                 </a>
             </li>
         </ul>
