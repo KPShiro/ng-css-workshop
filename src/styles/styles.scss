@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    table th {
+        @apply border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 dark:text-slate-200 text-left;
+    }
+
+    table tbody {
+        @apply bg-slate-50 dark:bg-slate-800;
+    }
+
+    table td {
+        @apply border-b dark:border-slate-700 p-4 pl-8 dark:text-slate-400;
+    }
+
+    table tr:hover td {
+        @apply dark:bg-white dark:bg-opacity-5;
+    }
+}

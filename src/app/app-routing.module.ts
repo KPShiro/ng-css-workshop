@@ -1,11 +1,20 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WorkshopComponent } from './core/containers';
+import { WorkspaceComponent, CssUnitsPageComponent } from '@app/core/containers';
 
 const routes: Routes = [
     {
-        path: '',
-        component: WorkshopComponent,
+        path: 'css-units',
+        component: CssUnitsPageComponent,
+    },
+    {
+        path: 'workspace',
+        component: WorkspaceComponent,
+    },
+    {
+        path: '**',
+        pathMatch: 'full',
+        redirectTo: '/css-units',
     },
 ];
 

@@ -1,0 +1,22 @@
+<nav class="bg-white py-2.5 scroll dark:bg-gray-900 sticky w-full z-20 top-0 left-0 border-b dark:border-gray-600">
+    <div class="max-w-6xl flex items-center justify-between mx-auto px-8">
+        <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">
+            <a [routerLink]="[ '/' ]">
+                <span class="text-blue-600">CSS</span> Workshop
+            </a>
+        </span>
+        <ul class="flex items-center p-4 space-x-2 text-sm font-medium">
+            <li *ngFor="let navLink of (navLinks | async)">
+                <a [routerLink]="[ navLink.path ]"
+                    class="block py-2.5 px-3 rounded-md hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium"
+                    routerLinkActive="nav-link--active">{{ navLink.text }}</a>
+            </li>
+            <li>
+                <a [routerLink]="[ '/workspace' ]"
+                    class="block py-2.5 px-4 rounded-md bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium">
+                    My Workspace
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

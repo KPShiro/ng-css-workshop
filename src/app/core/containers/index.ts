@@ -1,1 +1,2 @@
-export * from './workshop/workshop.component';
+export * from './workspace/workspace.component';
+export * from './css-units/css-units.component';
