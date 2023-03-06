@@ -1,11 +1,12 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
 import { NavbarComponent } from '@app/core/components';
+import { CssUnitsPageComponent } from '@app/core/containers';
 
 @NgModule({
     imports: [SharedModule],
     exports: [NavbarComponent],
-    declarations: [NavbarComponent],
+    declarations: [NavbarComponent, CssUnitsPageComponent],
 })
 export class CoreModule {
     constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

@@ -2,7 +2,8 @@
     <article class="prose dark:prose-invert">
         <h1>Absolute length units</h1>
         <p>
-            The following are all absolute length units — they are not relative to anything else, and are generally
+            The following are all absolute length units — they are not relative to anything else, and are
+            generally
             considered to always be the same size.
         </p>
     </article>
@@ -49,7 +50,8 @@
     <article class="prose dark:prose-invert">
         <blockquote>
             <span class="text-yellow-500">Warning:</span> Pixels (px) are relative to the viewing device. For
-            low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens
+            low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution
+            screens
             1px implies multiple device pixels.
         </blockquote>
     </article>
@@ -127,7 +129,7 @@
 
 <section class="mt-24 space-y-8">
     <article class="prose dark:prose-invert">
-        <h1>Which one should I use?</h1>
+        <h1>Which one should be used?</h1>
         <p>
             Well... it depends what you want to achieve. If you want to have an element that
             adapts to, for example, browser settings - use <code class="text-yellow-500">rem</code>
@@ -144,4 +146,93 @@
             browser or device settings.
         </blockquote>
     </article>
-</section>    
+</section>
+
+<section class="mt-24 flex gap-4">
+    <div class="space-y-3 flex-1">
+        <h2 class="text-2xl font-bold">Example: <code>px</code></h2>
+        <div class="flex gap-4 border border-slate-700 bg-slate-800 rounded-md p-6">
+            <div class="example-card">
+                <div class="example-card__title">
+                    Lorem ipsum dolor sit amet
+                </div>
+                <div class="example-card__description">
+                    Consectetur adipisicing elit. Vero animi voluptas, sequi illo iure itaque
+                    error. Eius quos consequuntur nostrum sit non vero totam inventore reiciendis sed magnam.
+                    Itaque,
+                    dolores.
+                </div>
+                <button class="example-card__action">
+                    Lorem ipsum
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="space-y-3 flex-1">
+        <h2 class="text-2xl font-bold">Example: <code>rem</code></h2>
+        <div class="flex gap-4 border border-slate-700 bg-slate-800 rounded-md p-6">
+            <div class="example-card example-card--rem">
+                <div class="example-card__title">
+                    Lorem ipsum dolor sit amet
+                </div>
+                <div class="example-card__description">
+                    Consectetur adipisicing elit. Vero animi voluptas, sequi illo iure itaque
+                    error. Eius quos consequuntur nostrum sit non vero totam inventore reiciendis sed magnam.
+                    Itaque,
+                    dolores.
+                </div>
+                <button class="example-card__action">
+                    Lorem ipsum
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-24 flex gap-4">
+    <div class="space-y-3 flex-1">
+        <h2 class="text-2xl font-bold">Example: <code>rem</code></h2>
+        <div class="flex flex-1 flex-col gap-4 border border-slate-700 bg-slate-800 rounded-md p-4">
+            <div class="example-list">
+                <div class="example-item">
+                    Lorem ipsum
+                    <div class="example-item">
+                        Lorem ipsum
+                        <div class="example-item">
+                            Lorem ipsum
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space-y-3 flex-1">
+        <h2 class="text-2xl font-bold">Example: <code>em</code></h2>
+        <div class="flex flex-1 flex-col gap-4 border border-slate-700 bg-slate-800 rounded-md p-4">
+            <div class="example-list example-list--em">
+                <div class="example-item">
+                    Lorem ipsum
+                    <div class="example-item">
+                        Lorem ipsum
+                        <div class="example-item">
+                            Lorem ipsum
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-24 space-y-8">
+    <article class="prose dark:prose-invert">
+        <h1>TL;DR</h1>
+        <ul>
+            <li>Always respect user's accessability settings</li>
+            <li>Try to use <code>rem</code> when it's possible - almost every UI element should adjust to the user
+                settings</li>
+            <li>If you are working with fixed-size elements like borders or shadows, <code>px</code> may be the better
+                choice</li>
+        </ul>
+    </article>
+</section>
