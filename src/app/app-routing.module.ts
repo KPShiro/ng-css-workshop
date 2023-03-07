@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {
     WorkspaceComponent,
     CssUnitsPageComponent,
+    LayoutFlexboxPageComponent,
 } from '@app/core/containers';
 
 const routes: Routes = [
@@ -20,8 +21,7 @@ const routes: Routes = [
             },
             {
                 path: 'layout-flexbox',
-                // TODO: Add a proper component
-                component: CssUnitsPageComponent,
+                component: LayoutFlexboxPageComponent,
             },
             {
                 path: 'layout-grid',
