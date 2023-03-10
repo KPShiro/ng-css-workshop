@@ -2,38 +2,13 @@
     <div class="max-w-6xl flex items-center justify-between mx-auto px-8">
         <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">
             <a [routerLink]="[ '/' ]">
-                <span class="text-blue-600">CSS</span> Workshop
+                <span class="text-blue-500 mr-1">CSS</span> Workshop
             </a>
         </span>
-        <ul class="flex items-center p-4 space-x-2 text-sm font-medium">
-            <li class="relative group">
-                <a [routerLink]="[ '/cases' ]" class="block py-2.5 px-3 rounded-md group-hover:bg-white group-hover:bg-opacity-5 border border-slate-800 hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium"
-                    routerLinkActive="nav-link--active">
-                    Knowledge base
-                    <fa-icon [icon]="['fas', 'angle-down']" class="ml-1"></fa-icon>
-                </a>
-                <div class="absolute left-0 top-full z-10 hidden min-w-[192px] group-hover:block">
-                    <ul class="block mt-2 rounded-md shadow dark:bg-gray-800 py-2">
-                        <li *ngFor="let navLink of (navLinks | async)">
-                            <a [routerLink]="[ navLink.path ]" routerLinkActive="nav-link--active" 
-                                class="block py-2.5 px-3 hover:bg-white hover:bg-opacity-5 text-slate-500 font-medium">
-                                {{ navLink.text }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a [routerLink]="[ '/dos-and-donts' ]"
-                    class="block py-2.5 px-3 rounded-md hover:bg-white border border-slate-800 hover:bg-opacity-5 text-slate-500 font-medium"
-                    routerLinkActive="nav-link--active">Dos and don'ts</a>
-            </li>
-            <li>
-                <a [routerLink]="[ '/workspace' ]"
-                    class="block py-2.5 px-4 rounded-md bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium">
-                    My Workspace
-                </a>
-            </li>
-        </ul>
+        <div class="flex items-center p-4 space-x-2 text-sm font-medium">
+            <ng-container *ngFor="let link of (links$ | async)">
+                <app-navbar-link [link]="link"></app-navbar-link>
+            </ng-container>
+        </div>
     </div>
 </nav>

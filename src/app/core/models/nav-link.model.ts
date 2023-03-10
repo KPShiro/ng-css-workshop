@@ -1,4 +1,6 @@
 export interface INavLink {
-    path: string;
     text: string;
+    path: string;
+    children: INavLink[];
+    highlighted: boolean;
 }

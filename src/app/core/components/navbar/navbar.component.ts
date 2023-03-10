@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { INavLink } from '@app/core/models';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { NavigationService } from '@app/core/services';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-navbar',
@@ -8,27 +9,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
     styleUrls: ['./navbar.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent implements OnInit {
-    private readonly _navLinks = new BehaviorSubject<INavLink[]>([]);
-
-    get navLinks(): Observable<INavLink[]> {
-        return this._navLinks.asObservable();
+export class NavbarComponent {
+    get links$(): Observable<INavLink[]> {
+        return this._navigationService.links$;
     }
 
-    ngOnInit(): void {
-        this._navLinks.next([
-            {
-                path: '/cases/css-units',
-                text: 'CSS Units',
-            },
-            {
-                path: '/cases/layout-flexbox',
-                text: 'Layout: Flexbox',
-            },
-            {
-                path: '/cases/layout-grid',
-                text: 'Layout: Grid',
-            },
-        ]);
-    }
+    constructor(private readonly _navigationService: NavigationService) {}
 }

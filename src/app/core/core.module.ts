@@ -1,8 +1,9 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { NavbarComponent } from '@app/core/components';
+import { NavbarComponent, NavbarLinkComponent } from '@app/core/components';
 import {
     CssUnitsPageComponent,
+    FlexboxPageComponent,
     LayoutFlexboxPageComponent,
 } from '@app/core/containers';
 
@@ -11,7 +12,9 @@ import {
     exports: [NavbarComponent],
     declarations: [
         NavbarComponent,
+        NavbarLinkComponent,
         CssUnitsPageComponent,
+        FlexboxPageComponent,
         LayoutFlexboxPageComponent,
     ],
 })

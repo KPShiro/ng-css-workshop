@@ -1,0 +1,34 @@
+<div class="relative group">
+    <ng-container *ngIf="link.highlighted; else defaultLink">
+        <a [routerLink]="[ link.path ]"
+            class="inline-block py-2.5 px-3 font-medium rounded-md dark:text-white dark:bg-blue-600 dark:hover:bg-blue-700">
+            {{ link.text }}
+            <ng-container *ngIf="hasChildren">
+                <fa-icon [icon]="['fas', 'angle-down']" class="ml-1"></fa-icon>
+            </ng-container>
+        </a>
+    </ng-container>
+    <ng-template #defaultLink>
+        <a [routerLink]="[ link.path ]"
+            class="inline-block py-2.5 px-3 font-medium rounded-md border dark:border-white dark:border-opacity-10 dark:text-white dark:text-opacity-50 dark:hover:bg-slate-800 dark:group-hover:bg-slate-800"
+            routerLinkActive="dark:text-opacity-90 dark:bg-slate-800">
+            {{ link.text }}
+            <ng-container *ngIf="hasChildren">
+                <fa-icon [icon]="['fas', 'angle-down']" class="ml-1"></fa-icon>
+            </ng-container>
+        </a>
+    </ng-template>
+    <ng-container *ngIf="hasChildren">
+        <div class="absolute left-0 top-full z-10 hidden min-w-[192px] group-hover:block">
+            <div class="mt-2 rounded-md shadow-md dark:bg-gray-800 py-2">
+                <ng-container *ngFor="let childLink of link.children">
+                    <a [routerLink]="[ link.path, childLink.path ]"
+                        class="block py-2.5 px-3 font-medium dark:text-slate-500 dark:hover:bg-slate-700 dark:hover:bg-opacity-80"
+                        routerLinkActive="dark:text-white dark:bg-slate-700 dark:bg-opacity-40">
+                        {{ childLink.text }}
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</div>

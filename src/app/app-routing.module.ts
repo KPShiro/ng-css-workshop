@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import {
     WorkspaceComponent,
     CssUnitsPageComponent,
-    LayoutFlexboxPageComponent,
+    FlexboxPageComponent,
 } from '@app/core/containers';
+import { NavigationService } from './core/services';
 
 const routes: Routes = [
     {
-        path: 'cases',
+        path: 'workshops',
+        data: {
+            text: 'Workshops',
+        },
         children: [
             {
                 path: '',
@@ -17,32 +21,40 @@ const routes: Routes = [
             },
             {
                 path: 'css-units',
+                data: {
+                    text: 'CSS Units',
+                },
                 component: CssUnitsPageComponent,
             },
             {
-                path: 'layout-flexbox',
-                component: LayoutFlexboxPageComponent,
+                path: 'flexbox',
+                data: {
+                    text: 'Flexbox - About',
+                },
+                component: FlexboxPageComponent,
             },
             {
-                path: 'layout-grid',
+                path: 'dos-and-donts',
+                data: {
+                    text: "Dos and don'ts",
+                },
                 // TODO: Add a proper component
-                component: CssUnitsPageComponent,
+                component: WorkspaceComponent,
             },
         ],
     },
     {
-        path: 'dos-and-donts',
-        // TODO: Add a proper component
-        component: WorkspaceComponent,
-    },
-    {
         path: 'workspace',
+        data: {
+            text: 'My Workspace',
+            highlighted: true,
+        },
         component: WorkspaceComponent,
     },
     {
         path: '**',
         pathMatch: 'full',
-        redirectTo: '/cases/css-units',
+        redirectTo: '/workshops/css-units',
     },
 ];
 
@@ -51,11 +63,16 @@ const routes: Routes = [
     exports: [RouterModule],
 })
 export class AppRoutingModule {
-    constructor(@Optional() @SkipSelf() parentModule: AppRoutingModule) {
+    constructor(
+        @Optional() @SkipSelf() parentModule: AppRoutingModule,
+        private readonly _navigationService: NavigationService
+    ) {
         if (parentModule) {
             throw new Error(
                 `${AppRoutingModule.name} is already loaded. Import it in the main AppModule only.`
             );
         }
+
+        this._navigationService.init(routes);
     }
 }
