@@ -1,11 +1,9 @@
-<nav class="bg-white py-2.5 dark:bg-gray-900 w-full border-b dark:border-gray-600">
-    <div class="max-w-6xl flex items-center justify-between mx-auto px-8">
-        <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">
-            <a [routerLink]="[ '/' ]">
-                <span class="text-blue-500 mr-1">CSS</span> Workshop
-            </a>
-        </span>
-        <div class="flex items-center p-4 space-x-2 text-sm font-medium">
+<nav class="bg-slate-50 py-4 dark:bg-gray-900 w-full border-b dark:border-gray-700">
+    <div class="max-w-6xl flex items-center justify-between mx-auto px-6">
+        <a [routerLink]="[ '/' ]" class="text-xl font-bold whitespace-nowrap dark:text-white">
+            Codesign
+        </a>
+        <div class="flex items-center space-x-2 text-sm font-medium">
             <ng-container *ngFor="let link of (links$ | async)">
                 <app-navbar-link [link]="link"></app-navbar-link>
             </ng-container>
