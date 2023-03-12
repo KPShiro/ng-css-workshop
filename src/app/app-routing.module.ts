@@ -1,7 +1,6 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
-    WorkspaceComponent,
     CssUnitsPageComponent,
     FlexboxPageComponent,
 } from '@app/core/containers';
@@ -33,14 +32,6 @@ const routes: Routes = [
                 },
                 component: FlexboxPageComponent,
             },
-            {
-                path: 'dos-and-donts',
-                data: {
-                    text: "Dos and don'ts",
-                },
-                // TODO: Add a proper component
-                component: WorkspaceComponent,
-            },
         ],
     },
     {
@@ -49,7 +40,10 @@ const routes: Routes = [
             text: 'My Workspace',
             highlighted: true,
         },
-        component: WorkspaceComponent,
+        loadChildren: () =>
+            import('./workspace/workspace.module').then(
+                (m) => m.WorkspaceModule
+            ),
     },
     {
         path: '**',
