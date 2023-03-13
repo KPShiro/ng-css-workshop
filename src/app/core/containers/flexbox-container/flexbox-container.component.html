@@ -1,0 +1,504 @@
+<h1 class="mb-6">
+    CSS Flexbox - Container
+</h1>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        How to change Flexbox direction?
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            If you need to change the layout, for example render elements from top to bottom, you will need to use
+            <code>flex-direction</code> property. This will switch the main axis between <code>horizontal</code> and
+            <code>vertical</code>. There are a few options available:
+        </p>
+        <ul class="list-disc list-inside">
+            <li>
+                <code>row</code> - default, use horizontal axis
+                <div class="example-container flex">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>row-reverse</code> - use horizontal axis but in a reverse
+                <div class="example-container flex flex-row-reverse">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>column</code> - use vertical axis
+                <div class="example-container flex flex-col">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>column-reverse</code> - use vertical axis, but reversed
+                <div class="example-container flex flex-col-reverse">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        How to align items on the main axis?
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            While working with the Flexbox you will need to somehow align items within your container. It is also a very
+            easy task that will require from you only the knowledge of <code>justify-content</code> property. Here are
+            the possible values:
+        </p>
+        <ul class="list-disc list-inside">
+            <li>
+                <code>flex-start</code> - default, align items to the start of the main axis
+                <div class="example-container flex justify-start">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>flex-center</code> - align items to the center of the main axis
+                <div class="example-container flex justify-center">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>flex-end</code> - align items to the end of the main axis
+                <div class="example-container flex justify-end">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>space-between</code> - evenly distribute items along the main axis, between the first and the last
+                item
+                <div class="example-container flex justify-between">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>space-around</code> - similiar to <code>space-between</code>, but this time spacing is distributed
+                around each item
+                <div class="example-container flex justify-around">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>space-evenly</code> - similiar to <code>space-around</code>, distribute space evenly between the
+                items inside flex container
+                <div class="example-container flex justify-evenly">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        How to align items on the cross axis?
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            Another usefull Flexbox property is the <code>align-items</code> property. It allows you to place items
+            along the cross axis ("secondary" axis of flexbox container). Here are the possible values:
+        </p>
+        <ul class="list-disc list-inside">
+            <li>
+                <code>start</code> - default, align items to the start of the cross axis
+                <div class="example-container flex items-start h-[160px]">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>center</code> - align items to the center of the cross axis
+                <div class="example-container flex items-center h-[160px]">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>end</code> - align items to the end of the cross axis
+                <div class="example-container flex items-end h-[160px]">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>stretch</code> - strech items along the cross axis
+                <div class="example-container flex items-stretch h-[160px]">
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>baseline</code> - all flex items are aligned such that their flex container baselines align
+                <div class="example-container flex items-baseline h-[160px]">
+                    <div class="example-container__item">
+                        <span class="text-4xl">1</span>
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Flex container wrapping
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            By default, flex items will always try to fit in one line. You can change that behavior with
+            <code>flex-wrap</code> property.
+        </p>
+        <ul class="list-disc list-inside">
+            <li>
+                <code>nowrap</code> - default, item wrapping disabled
+                <div class="example-container flex">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>wrap</code> - enable items wrapping
+                <div class="example-container flex flex-wrap">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+            <li>
+                <code>wrap-reverse</code> - enable items wrapping (reversed)
+                <div class="example-container flex flex-wrap-reverse">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p>
+            Once you will use <code>flex-wrap</code> property and items will wrap, new property will be "unlocked" -
+            <code>align-content</code>. It will allow you to control everything along the cross axis. Values are similar
+            to the <code>justify-content</code>.
+        </p>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        How to add gaps between the items?
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            It will be tempting to add margins or paddings to the elements inside flex container, but there is much
+            simpler and better way to do that - <code>gap</code> property. It will add space between each item inside
+            flex container.
+        </p>
+        <ul class="list-disc list-inside">
+            <li>
+                Both for rows and columns (<code>gap: 12px</code>):
+                <div class="example-container flex flex-wrap gap-3">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+            <li>
+                Only for columns (<code>column-gap: 12px</code>):
+                <div class="example-container flex flex-wrap gap-x-3">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+            <li>
+                Only for rows (<code>row-gap: 12px</code>):
+                <div class="example-container flex flex-wrap gap-y-3">
+                    <div class="example-container__item">
+                        0
+                    </div>
+                    <div class="example-container__item">
+                        1
+                    </div>
+                    <div class="example-container__item">
+                        2
+                    </div>
+                    <div class="example-container__item">
+                        3
+                    </div>
+                    <div class="example-container__item">
+                        4
+                    </div>
+                    <div class="example-container__item">
+                        5
+                    </div>
+                    <div class="example-container__item">
+                        6
+                    </div>
+                    <div class="example-container__item">
+                        7
+                    </div>
+                    <div class="example-container__item">
+                        8
+                    </div>
+                    <div class="example-container__item">
+                        9
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

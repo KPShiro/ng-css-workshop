@@ -2,6 +2,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
     CssUnitsPageComponent,
+    FlexboxContainerPageComponent,
     FlexboxPageComponent,
 } from '@app/core/containers';
 import { NavigationService } from './core/services';
@@ -28,9 +29,16 @@ const routes: Routes = [
             {
                 path: 'flexbox',
                 data: {
-                    text: 'Flexbox - About',
+                    text: 'Flexbox',
                 },
                 component: FlexboxPageComponent,
+            },
+            {
+                path: 'flexbox-container',
+                data: {
+                    text: 'Flexbox - Container',
+                },
+                component: FlexboxContainerPageComponent,
             },
         ],
     },

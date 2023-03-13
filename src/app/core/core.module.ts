@@ -1,10 +1,16 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { EmExampleComponent, ExampleCardComponent, NavbarComponent, NavbarLinkComponent, RemExampleComponent } from '@app/core/components';
+import {
+    EmExampleComponent,
+    ExampleCardComponent,
+    NavbarComponent,
+    NavbarLinkComponent,
+    RemExampleComponent,
+} from '@app/core/components';
 import {
     CssUnitsPageComponent,
+    FlexboxContainerPageComponent,
     FlexboxPageComponent,
-    LayoutFlexboxPageComponent,
 } from '@app/core/containers';
 
 @NgModule({
@@ -15,7 +21,7 @@ import {
         NavbarLinkComponent,
         CssUnitsPageComponent,
         FlexboxPageComponent,
-        LayoutFlexboxPageComponent,
+        FlexboxContainerPageComponent,
         EmExampleComponent,
         ExampleCardComponent,
         RemExampleComponent,
