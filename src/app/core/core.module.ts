@@ -10,6 +10,8 @@ import {
 import {
     CssUnitsPageComponent,
     FlexboxContainerPageComponent,
+    FlexboxItemsPageComponent,
+    FlexboxLayoutsPageComponent,
     FlexboxPageComponent,
 } from '@app/core/containers';
 
@@ -22,6 +24,8 @@ import {
         CssUnitsPageComponent,
         FlexboxPageComponent,
         FlexboxContainerPageComponent,
+        FlexboxItemsPageComponent,
+        FlexboxLayoutsPageComponent,
         EmExampleComponent,
         ExampleCardComponent,
         RemExampleComponent,

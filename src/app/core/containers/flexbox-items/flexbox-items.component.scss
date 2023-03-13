@@ -1,0 +1,18 @@
+.example-container {
+    @apply p-3 border border-slate-500;
+}
+
+.example-container.flex:not(.flex-col):not(.flex-col-reverse) {
+    @apply border-t-4 border-t-blue-600;
+    @apply border-l-4 border-l-yellow-600;
+}
+
+.example-container.flex-col,
+.example-container.flex-col-reverse {
+    @apply border-t-4 border-t-yellow-600;
+    @apply border-l-4 border-l-blue-600;
+}
+
+.example-container__item {
+    @apply p-3 flex justify-center min-w-[64px] border border-slate-500;
+}

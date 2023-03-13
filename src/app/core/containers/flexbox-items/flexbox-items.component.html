@@ -1,0 +1,134 @@
+<h1 class="mb-6">
+    CSS Flexbox - Items
+</h1>
+<div class="prose dark:prose-invert mb-12">
+    <p>
+        Flexbox gives you also control over the items inside flex containers. All properties below can be used
+        <b>only</b> on the flex items.
+    </p>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        <code>flex-grow</code>
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            When styling flexbox items, it's common to specify their growth. You can do that by controlling unitless
+            property called <code>flex-grow</code>. The value serves as the proportion and it allows the item to grow if
+            there is a space to do so. In the example below, second item fills the space.
+        </p>
+        <div class="example-container flex">
+            <div class="example-container__item">
+                1
+            </div>
+            <div class="example-container__item flex-grow">
+                2
+            </div>
+            <div class="example-container__item">
+                3
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        <code>flex-shrink</code>
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            Another usefull property - <code>flex-shrink</code> - allows to specify how fast certain item can shrink.
+            This property also takes unitless value, same as flex-grow. The higher number set, the faster your item will
+            shrink. If you want to disable shrinking completely, set a value to 0.
+        </p>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        <code>flex-basis</code>
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            This property defines the size of the item, before the remaining space is distributed. If your item has
+            already some width (e.g. 128px), you can override that with <code>flex-basis</code>.
+        </p>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Usefull shorthand - <code>flex</code>
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            Personally I almost never use the properties above separately. Most of the time I use a shorthand -
+            <code>flex</code>. This property takes 3 values: flex-grow, flex-shrink and flex-basis - last two are
+            optional.
+        </p>
+        <div class="example-container flex">
+            <div class="example-container__item">
+                1
+            </div>
+            <div class="example-container__item flex-1">
+                2
+            </div>
+            <div class="example-container__item">
+                3
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Override item's position
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            There might be a situation where you will have to positon a certain flex item differently from the rest.
+            You can do that with the <code>align-self</code> property. This will give you control over the item's
+            position along the cross axis.
+        </p>
+        <div class="example-container flex items-start h-[160px]">
+            <div class="example-container__item">
+                1
+            </div>
+            <div class="example-container__item self-center">
+                2
+            </div>
+            <div class="example-container__item">
+                3
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Flex item order
+    </h2>
+    <div class="prose dark:prose-invert mb-6">
+        <p>
+            There is one more flex item property - <code>order</code>. It lets you change the order of the items in the
+            container. Remember to use it only if you absolutely have to, because it messes with the semantics and the
+            accessibility of your HTML.
+        </p>
+        <p>
+            All items have the <code>order</code> property value set to 0 by default. In the example below, I set the
+            <code>order: -1;</code> for the last item, so it can be displayed as the first one in the row.
+        </p>
+        <div class="example-container flex">
+            <div class="example-container__item">
+                1
+            </div>
+            <div class="example-container__item">
+                2
+            </div>
+            <div class="example-container__item order-[-1]">
+                3
+            </div>
+        </div>
+    </div>
+</div>

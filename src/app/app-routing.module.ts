@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {
     CssUnitsPageComponent,
     FlexboxContainerPageComponent,
+    FlexboxItemsPageComponent,
+    FlexboxLayoutsPageComponent,
     FlexboxPageComponent,
 } from '@app/core/containers';
 import { NavigationService } from './core/services';
@@ -39,6 +41,20 @@ const routes: Routes = [
                     text: 'Flexbox - Container',
                 },
                 component: FlexboxContainerPageComponent,
+            },
+            {
+                path: 'flexbox-items',
+                data: {
+                    text: 'Flexbox - Items',
+                },
+                component: FlexboxItemsPageComponent,
+            },
+            {
+                path: 'flexbox-layouts',
+                data: {
+                    text: 'Flexbox - Layouts',
+                },
+                component: FlexboxLayoutsPageComponent,
             },
         ],
     },
