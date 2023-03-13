@@ -1,3 +1,108 @@
 <h1 class="mb-6">
     CSS Flexbox - Common Layouts
 </h1>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Grid-ish (e.g. tags container)
+    </h2>
+    <div class="flex flex-wrap gap-2 max-w-[800px]">
+        <ng-container *ngFor="let tag of tags">
+            <div class="bg-slate-800 py-3 px-6 text-center">
+                {{ tag }}
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Even columns
+    </h2>
+    <div class="flex gap-2 h-[512px]">
+        <div class="border-4 border-slate-500 text-center flex-1">
+            <div class="p-3 bg-slate-500">
+                To do
+            </div>
+        </div>
+        <div class="border-4 border-slate-500 text-center flex-1">
+            <div class="p-3 bg-slate-500">
+                In progress
+            </div>
+        </div>
+        <div class="border-4 border-slate-500 text-center flex-1">
+            <div class="p-3 bg-slate-500">
+                Done
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Sidebar and content
+    </h2>
+    <div class="flex gap-2 h-[512px]">
+        <div class="bg-slate-500 p-6 text-center flex-1 basis-[25%]">
+            Sidebar
+        </div>
+        <div class="border-4 border-slate-500 p-6 text-center flex-1 basis-[75%]">
+            Content
+        </div>
+    </div>
+</div>
+
+<div class="mb-12">
+    <h2 class="mb-6">
+        Topbar and scrollable content
+    </h2>
+    <div class="flex flex-col gap-2 h-[512px]">
+        <div class="bg-slate-500 p-6">
+            Topbar
+        </div>
+        <div class="border-4 border-slate-500 p-6 flex-1 overflow-hidden overflow-y-auto">
+            <div class="prose dark:prose-invert">
+                <h4>Lorem ipsum</h4>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit laborum atque unde, asperiores
+                    voluptatibus in rerum ipsa sunt quidem magni? At delectus molestias iusto expedita ex! Maiores nobis
+                    consequatur vel similique cupiditate odio, sunt nam perspiciatis explicabo. Perspiciatis perferendis
+                    voluptatibus nobis obcaecati iure recusandae mollitia reprehenderit, blanditiis est quisquam magnam
+                    aut voluptatem.
+                </p>
+                <p>
+                    Recusandae quidem temporibus consectetur vel explicabo et placeat labore eveniet
+                    magnam quod. Nobis nesciunt, adipisci expedita placeat similique in illum aut corrupti eligendi
+                    temporibus consequatur explicabo quae hic velit voluptatem nostrum suscipit perferendis possimus
+                    autem minus.
+                </p>
+                <p>
+                    Quod commodi doloremque minus eius quibusdam dicta fugit! Temporibus vitae at, sequi
+                    quasi consectetur amet unde, magni harum debitis consequuntur, quidem quas! Impedit, delectus
+                    consequatur. Omnis quo necessitatibus repellendus totam nam veritatis explicabo tempore, eum,
+                    doloribus, illo inventore consequatur reprehenderit!
+                </p>
+                <h4>Lorem ipsum</h4>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit laborum atque unde, asperiores
+                    voluptatibus in rerum ipsa sunt quidem magni? At delectus molestias iusto expedita ex! Maiores nobis
+                    consequatur vel similique cupiditate odio, sunt nam perspiciatis explicabo. Perspiciatis perferendis
+                    voluptatibus nobis obcaecati iure recusandae mollitia reprehenderit, blanditiis est quisquam magnam
+                    aut voluptatem.
+                </p>
+                <p>
+                    Recusandae quidem temporibus consectetur vel explicabo et placeat labore eveniet
+                    magnam quod. Nobis nesciunt, adipisci expedita placeat similique in illum aut corrupti eligendi
+                    temporibus consequatur explicabo quae hic velit voluptatem nostrum suscipit perferendis possimus
+                    autem minus.
+                </p>
+                <p>
+                    Quod commodi doloremque minus eius quibusdam dicta fugit! Temporibus vitae at, sequi
+                    quasi consectetur amet unde, magni harum debitis consequuntur, quidem quas! Impedit, delectus
+                    consequatur. Omnis quo necessitatibus repellendus totam nam veritatis explicabo tempore, eum,
+                    doloribus, illo inventore consequatur reprehenderit!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
