@@ -1,6 +1,6 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { SharedModule } from '@app/shared/shared.module';
-import { NavbarComponent, NavbarLinkComponent } from '@app/core/components';
+import { EmExampleComponent, ExampleCardComponent, NavbarComponent, NavbarLinkComponent, RemExampleComponent } from '@app/core/components';
 import {
     CssUnitsPageComponent,
     FlexboxPageComponent,
@@ -16,6 +16,9 @@ import {
         CssUnitsPageComponent,
         FlexboxPageComponent,
         LayoutFlexboxPageComponent,
+        EmExampleComponent,
+        ExampleCardComponent,
+        RemExampleComponent,
     ],
 })
 export class CoreModule {

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer base {
     table th {
         @apply border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 dark:text-slate-200 text-left;
     }
@@ -17,5 +17,13 @@
 
     table tr:hover td {
         @apply dark:bg-white dark:bg-opacity-5;
+    }
+
+    h1 {
+        @apply text-4xl text-slate-900 tracking-tight font-bold dark:text-slate-50;
+    }
+
+    h2 {
+        @apply text-xl text-slate-900 tracking-tight font-bold dark:text-slate-50;
     }
 }
