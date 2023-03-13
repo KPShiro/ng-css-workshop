@@ -9,6 +9,7 @@ import {
 } from '@app/core/components';
 import {
     CssUnitsPageComponent,
+    DosAndDontsPageComponent,
     FlexboxContainerPageComponent,
     FlexboxItemsPageComponent,
     FlexboxLayoutsPageComponent,
@@ -22,10 +23,11 @@ import {
         NavbarComponent,
         NavbarLinkComponent,
         CssUnitsPageComponent,
-        FlexboxPageComponent,
+        DosAndDontsPageComponent,
         FlexboxContainerPageComponent,
         FlexboxItemsPageComponent,
         FlexboxLayoutsPageComponent,
+        FlexboxPageComponent,
         EmExampleComponent,
         ExampleCardComponent,
         RemExampleComponent,

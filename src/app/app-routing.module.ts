@@ -2,6 +2,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
     CssUnitsPageComponent,
+    DosAndDontsPageComponent,
     FlexboxContainerPageComponent,
     FlexboxItemsPageComponent,
     FlexboxLayoutsPageComponent,
@@ -55,6 +56,13 @@ const routes: Routes = [
                     text: 'Flexbox - Layouts',
                 },
                 component: FlexboxLayoutsPageComponent,
+            },
+            {
+                path: 'dos-and-donts',
+                data: {
+                    text: 'Dos and dont\'s',
+                },
+                component: DosAndDontsPageComponent,
             },
         ],
     },
