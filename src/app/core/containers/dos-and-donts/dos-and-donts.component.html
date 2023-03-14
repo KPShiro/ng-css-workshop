@@ -17,26 +17,53 @@
 
         <div class="prose dark:prose-invert">
             <ul>
-                <li>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolorem assumenda voluptate
-                    consectetur reprehenderit nihil fugiat praesentium? Repudiandae, ea ipsa sequi provident
-                    necessitatibus accusamus, nulla vitae, voluptatum optio itaque alias?
-                </li>
+                <ng-container *ngFor="let item of (dosAndDonts$ | async)">
+                    <li>
+                        <span class="font-medium">
+                            {{ item.title }}
+                        </span>
+                        <ng-container *ngIf="item.description">
+                            <p class="opacity-70 m-0">
+                                {{ item.description }}
+                            </p>
+                        </ng-container>
+                    </li>
+                </ng-container>
             </ul>
         </div>
     </div>
     <div class="flex-1">
         <h2 class="mb-6">
-            Bad Practises
+            Links
+        </h2>
+
+        <div class="prose dark:prose-invert mb-12">
+            <ul>
+                <ng-container *ngFor="let link of (usefulLinks$ | async)">
+                    <li>
+                        <a [href]="link.link" target="_blank">
+                            {{ link.text }}
+                            <fa-icon class="ml-1 text-sm" [icon]="['fas', 'up-right-from-square']"></fa-icon>
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+
+        <h2 class="mb-6">
+            Social Media
         </h2>
 
         <div class="prose dark:prose-invert">
             <ul>
-                <li>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolorem assumenda voluptate
-                    consectetur reprehenderit nihil fugiat praesentium? Repudiandae, ea ipsa sequi provident
-                    necessitatibus accusamus, nulla vitae, voluptatum optio itaque alias?
-                </li>
+                <ng-container *ngFor="let link of (socialMediaLinks$ | async)">
+                    <li>
+                        <a [href]="link.link" target="_blank">
+                            {{ link.text }}
+                            <fa-icon class="ml-1 text-sm" [icon]="['fas', 'up-right-from-square']"></fa-icon>
+                        </a>
+                    </li>
+                </ng-container>
             </ul>
         </div>
     </div>
